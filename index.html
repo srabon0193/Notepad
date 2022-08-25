@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--cdn for icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--cdn for bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Srabon's Notepad</title>
+</head>
+<body>   
+    <div class="anime1 p-0 p-md-1 p-lg-1">
+        <marquee direction="right">
+            <img src="b1.gif" alt="This is Bird">
+        </marquee>
+    </div>
+    <div class="anime2 pt-0">
+        <marquee direction="left" scrollamount="8">
+            <img src="b3.gif" alt="This are Birds">
+        </marquee>
+    </div>
+
+    <div class="menu">
+            <div class="dropdown">
+                <button class="dropbtn">File</button>
+                <div class="dropdown-content">
+                <a href="#">
+                    <i class="fa-solid fa-file-circle-plus pr-3"></i>New</a>
+                <a href="#">
+                    <i class="fa-solid fa-folder-open pr-3"></i>Open File</a>
+                <a href="#">
+                    <i class="fa-solid fa-download pr-3"></i>Save</a>
+                <a href="#">
+                    <i class="fa-solid fa-download pr-3"></i>Save as</a>
+                <a href="#">
+                    <i class="fa-solid fa-circle-xmark pr-3"></i>Exit</a>
+                </div>
+            </div> 
+            <div class="dropdown">
+                <button class="dropbtn">Edit</button>
+                <div class="dropdown-content">
+                <a href="#">
+                    <i class="fa-solid fa-rotate-left pr-3"></i>Undo</a>
+                <a href="#">
+                    <i class="fa-solid fa-rotate-right pr-3"></i>Redo</a>
+                <a href="#">
+                    <i class="fa-solid fa-scissors pr-3"></i>Cut</a>
+                <a href="#">
+                    <i class="fa-solid fa-copy pr-3"></i>Copy</a>
+                <a href="#">
+                    <i class="fa-solid fa-paste pr-3"></i>Paste</a>
+                <a href="#">
+                    <i class="fa-solid fa-trash pr-3"></i>Delete</a>
+                <a href="#">
+                    <i class="fa-solid fa-check-double pr-3"></i>Select all</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Format</button>
+                <div class="dropdown-content">
+                <a href="#">
+                    <i class="fa-solid fa-file-word pr-3"></i>Word wrap</a>
+                <a href="#">
+                    <i class="fa-solid fa-font pr-3"></i>Font</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">View</button>
+                <div class="dropdown-content">
+                <a href="#">
+                    <i class="fa-solid fa-magnifying-glass-plus pr-3"></i>Zoom In</a>
+                <a href="#">
+                    <i class="fa-solid fa-magnifying-glass-minus pr-3"></i>Zoom Out</a>
+                <a href="#">
+                    <i class="fa-solid fa-gear pr-3"></i>Preferences</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Help</button>
+                <div class="dropdown-content">
+                <a href="#">
+                    <i class="fa-solid fa-circle-question pr-3"></i>View help</a>
+                <a href="#">
+                    <i class="fa-solid fa-comment pr-3"></i>Send feedback</a>
+                <a href="#">
+                    <i class="fa-solid fa-circle-info pr-3"></i>About</a>
+                </div>
+            </div>
+    </div>
+    <br>
+    <div class="menu pt-2" id="toolbar" >
+        <button id="btn newFile" title="New File">
+            <i class="fa-solid fa-file-circle-plus pr-3"></i>   
+        </button>
+        <button id="btn openFile" title="Open File">
+            <i class="fa-solid fa-folder-open pr-3"></i>
+        </button>
+        <button id="btn saveFile" title="Download File">
+            <i class="fa-solid fa-download pr-3"></i>
+        </button>
+        <button id="fontSize" title="Font Size">
+            <i class="fa-solid fa-font pr-3"></i>
+        </button>
+        <button id="bold" title="Bold">
+            <i class="fa-solid fa-bold pr-3"></i>
+        </button>
+        <button id="btn cutSelect" title="Cut">
+            <i class="fa-solid fa-scissors pr-3"></i>
+        </button>
+        <button id="btn copySelect" title="Copy">
+            <i class="fa-solid fa-copy pr-3"></i>
+        </button>
+        <button id="btn pasteText" title="Paste">
+            <i class="fa-solid fa-paste pr-3"></i>
+        </button>
+        <button id="btn undo" title="Undo">
+            <i class="fa-solid fa-rotate-left pr-3"></i>
+        </button>
+        <button id="btn redo" title="Redo">
+            <i class="fa-solid fa-rotate-right pr-3"></i>
+        </button>
+        <button id="zoomIn" title="Zoom In">
+            <i class="fa-solid fa-magnifying-glass-plus pr-3"></i>
+        </button>
+        <button id="zoomOut" title="Zoom Out">
+            <i class="fa-solid fa-magnifying-glass-minus pr-3"></i>
+        </button>
+
+    </div>
+
+    <div class="container pt-5">
+        <textarea id="text" placeholder="Start writing from here..."></textarea>
+    </div>
+    
+    <div class="container mb-2 pb-2">
+        <header>
+            <h1 class="text-center py-3 text-black">Srabon Kumar Ghosh</h1>
+        </header>
+        <main>
+            <div class="follow-section ">
+                <div class="title text-center mb-4">
+                    <h3 class="font-weight-bolder">Follow Me</h3>
+                </div>
+                <div class="row text-left text-md-center ">
+                    <div class="col-lg-4 col-md-6">
+                        <a href="https://www.facebook.com/srabon.k.ghosh.940641/" target="_blank">
+                        <i class="bg-primary p-2 fa-2x text-white mb-3 fa-brands fa-facebook"></i>
+                        </a>
+                        <h5 class="text-uppercase">Facebook</h5>
+                    </div> 
+                    <div class="col-lg-4 col-md-6">
+                        <a href="https://www.instagram.com/_its_diip/" target="_blank">
+                        <i class="bg-danger p-2 fa-2x text-white mb-3 fa-brands fa-instagram"></i>
+                        </a>
+                        <h5>Instagram</h5>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <a href="https://www.linkedin.com/in/srabon-kumar-ghosh-183244215/" target="_blank">
+                        <i class="bg-primary p-2 fa-2x text-white mb-3 fa-brands fa-linkedin"></i>
+                        </a>
+                        <h5>LinkedIn</h5>
+                    </div>
+                </div>
+            </div>      
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
