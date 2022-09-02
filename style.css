@@ -1,29 +1,28 @@
 /*Background Image*/
 body{
-    background-image: url('scene2.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: #eed0d0;
 }
 
-/*Background gif*/
-
-.anime1 img{
-    width: 3.5%;
-    margin: 0%;
+.editor {
+    display: flex;
+    margin-top: 10px;
 }
 
-.anime2 img{
-    width: 10%;
-    margin: 0%;
+.editor img {
+    height:50px ;
+    width: 50px;
 }
 
+.editor h3 {
+    margin-left: 10px;
+    margin-top: 5px;
+}
 /* MENU BAR */
 .menu {
     position: absolute;
     background-color: #5be6fe;
-    margin-left: 22%;
-    margin-top: 0px;
+    margin-left: 15%;
+    margin-top: 80px;
     width: 940px;
     height: 500px;
     border-radius: 0px 0px 4px 4px;
@@ -74,20 +73,26 @@ body{
     background-color: #f4f13f;
 }
 
+.edit{
+    margin-top: auto;
+    margin-bottom: 50px;
+    margin-left: 25px;
 
+}
  /* TEXT EDITOR */
  #text {
     height: 400px;
     width: 900px;
     background-color: white;
-    margin-left: 10%;
-    margin-top: 10px;
+    margin-left: 15%;
+    margin-top: 150px;
     font-size: 19px;
     font-weight: bold;
-    position: absolute;
+    position: relative;
  }
 
  /* PROFILE */
  .container {
-    padding-bottom: 450px;
+    padding-bottom: 600px;
  }
+
